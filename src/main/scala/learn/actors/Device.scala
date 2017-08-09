@@ -1,4 +1,4 @@
-package learn
+package learn.actors
 
 import akka.actor.{Actor, ActorLogging, Props}
 
@@ -18,7 +18,7 @@ object Device {
 class Device(groupId: String, deviceId: String) extends Actor with ActorLogging {
 
   import Device._
-  import learn.DeviceManager._
+  import learn.actors.DeviceManager._
 
   var lastTemperatureReading: Option[Double] = None
 

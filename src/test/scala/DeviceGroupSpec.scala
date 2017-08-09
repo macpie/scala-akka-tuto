@@ -2,7 +2,7 @@ import org.scalatest._
 import akka.actor._
 import akka.testkit._
 import scala.concurrent.duration._
-import learn._
+import learn.actors._
 
 class DeviceGroupSpec extends FunSuite {
 

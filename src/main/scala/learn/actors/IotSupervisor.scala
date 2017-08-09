@@ -1,6 +1,6 @@
-package learn
+package learn.actors
 
-import akka.actor.{ Actor, ActorLogging, Props }
+import akka.actor.{Actor, ActorLogging, Props}
 
 object IotSupervisor {
   def props(): Props = Props(new IotSupervisor)

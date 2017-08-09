@@ -1,6 +1,7 @@
-package learn
+package learn.actors
 
 import akka.actor.ActorSystem
+
 import scala.io.StdIn
 
 object IotApp {

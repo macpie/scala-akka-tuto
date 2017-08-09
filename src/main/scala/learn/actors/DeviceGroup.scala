@@ -1,7 +1,6 @@
-package learn
+package learn.actors
 
 import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
-import learn.DeviceGroup._
 import scala.concurrent.duration._
 
 object DeviceGroup {
@@ -29,7 +28,8 @@ object DeviceGroup {
 
 class DeviceGroup(groupId: String) extends Actor with ActorLogging {
 
-  import learn.DeviceManager._
+  import learn.actors.DeviceManager.RequestTrackDevice
+  import learn.actors.DeviceGroup._
 
   var deviceIdToActorMap = Map.empty[String, ActorRef]
   var actorToDeviceIdMap = Map.empty[ActorRef, String]

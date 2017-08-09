@@ -1,6 +1,7 @@
-package learn
+package learn.actors
 
 import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
+
 import scala.concurrent.duration.FiniteDuration
 
 object DeviceGroupQuery {

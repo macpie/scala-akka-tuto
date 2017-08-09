@@ -1,6 +1,7 @@
-package learn
+package learn.actors
 
-import akka.actor.{Actor, ActorLogging, Props, ActorRef, Terminated}
+import akka.actor.{Actor, ActorLogging, ActorRef, Props, Terminated}
+
 
 object DeviceManager {
   def props(): Props = Props(new DeviceManager)
@@ -10,7 +11,8 @@ object DeviceManager {
 }
 
 class DeviceManager extends Actor with ActorLogging {
-  import learn.DeviceManager._
+
+  import learn.actors.DeviceManager.{RequestTrackDevice}
 
   var groupIdToActor = Map.empty[String, ActorRef]
   var actorToGroupId = Map.empty[ActorRef, String]

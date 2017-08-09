@@ -1,9 +1,10 @@
 import org.scalatest._
 import akka.actor._
 import akka.testkit._
+
 import scala.concurrent.duration._
-import learn.Device
-import learn.DeviceManager
+import learn.actors.DeviceManager
+import learn.actors.Device
 
 class DeviceSpec extends FunSuite {
 
